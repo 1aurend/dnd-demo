@@ -1,0 +1,29 @@
+.item {
+  width: 600px;
+  height: 30px;
+  margin-block-end: 10px;
+  cursor: grab;
+}
+
+.item--dragging {
+  border: 2px solid white;
+}
+
+.item--depth-0 {
+  background-color: blue;
+}
+
+.item--depth-1 {
+  margin-inline-start: 30px;
+  background-color: green;
+}
+
+.item--depth-2 {
+  margin-inline-start: 60px;
+  background-color: orange;
+}
+
+.item--depth-3 {
+  margin-inline-start: 90px;
+  background-color: purple;
+}

@@ -14,7 +14,7 @@
     "1": {
       "id": "1",
       "children": ["4"],
-      "hasChildren": false,
+      "hasChildren": true,
       "isExpanded": true,
       "isChildrenLoading": false,
       "data": {
@@ -25,7 +25,7 @@
       "id": "2",
       "children": [],
       "hasChildren": false,
-      "isExpanded": false,
+      "isExpanded": true,
       "isChildrenLoading": false,
       "data": {
         "title": "2"
@@ -45,7 +45,7 @@
       "id": "4",
       "children": [],
       "hasChildren": false,
-      "isExpanded": false,
+      "isExpanded": true,
       "isChildrenLoading": false,
       "data": {
         "title": "4"
@@ -55,7 +55,7 @@
       "id": "5",
       "children": [],
       "hasChildren": false,
-      "isExpanded": false,
+      "isExpanded": true,
       "isChildrenLoading": false,
       "data": {
         "title": "5"
@@ -65,7 +65,7 @@
       "id": "6",
       "children": [],
       "hasChildren": false,
-      "isExpanded": false,
+      "isExpanded": true,
       "isChildrenLoading": false,
       "data": {
         "title": "6"

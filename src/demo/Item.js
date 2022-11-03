@@ -10,15 +10,9 @@ export default function Item({
   draggableProps,
   dragHandleProps,
   isDragging,
-  onExpand,
-  onCollapse,
   setCombine,
   combine,
 }) {
-  const toggleExpand = () => {
-    item.isExpanded ? onCollapse(item.id) : onExpand(item.id);
-  };
-
   const active = useContext(DragOverContext);
 
   if (isDragging) {
@@ -37,7 +31,6 @@ export default function Item({
         [styles["item--depth-2"]]: depth === 2,
         [styles["item--depth-3"]]: depth === 3,
       })}
-      onClick={toggleExpand}
     >
       <span style={{ marginLeft: "10px" }}>
         {item.data ? item.data.title : ""}

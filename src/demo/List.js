@@ -9,14 +9,7 @@ export default function List() {
   const [tree, setTree] = useState(test);
   const [combine, setCombine] = useState(null);
 
-  const renderItem = ({
-    item,
-    provided,
-    snapshot,
-    depth,
-    onCollapse,
-    onExpand,
-  }) => {
+  const renderItem = ({ item, provided, snapshot, depth }) => {
     return (
       <Item
         item={item}
@@ -26,8 +19,6 @@ export default function List() {
         dragHandleProps={provided.dragHandleProps}
         isDragging={snapshot.isDragging}
         placeholder={provided.placeholder}
-        onCollapse={onCollapse}
-        onExpand={onExpand}
         setCombine={setCombine}
         combine={snapshot.combineWith}
       />
@@ -41,16 +32,6 @@ export default function List() {
       isExpanded: true,
     });
     setTree(expand);
-  };
-
-  const onExpand = (itemId) => {
-    const update = mutateTree(tree, itemId, { isExpanded: true });
-    setTree(update);
-  };
-
-  const onCollapse = (itemId) => {
-    const update = mutateTree(tree, itemId, { isExpanded: false });
-    setTree(update);
   };
 
   return tree ? (
@@ -68,8 +49,6 @@ export default function List() {
           tree={tree}
           renderItem={renderItem}
           onDragEnd={onDragEnd}
-          onExpand={onExpand}
-          onCollapse={onCollapse}
           isDragEnabled
           isNestingEnabled
           offsetPerLevel={0}
